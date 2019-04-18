@@ -1,45 +1,43 @@
 .name {
-  background: black;
-  height: 300px;
-  width: 300px;
-  margin: 5px;
+    background: black;
+    height: 300px;
+    width: 300px;
+    margin: 5px;
 }
 .container {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(100px, 1fr));
-  grid-auto-rows: minmax(100px, auto);
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-auto-rows: minmax(100px, auto);
     grid-gap:5px; 
-  margin: 0 auto;
+    margin: 0 auto;
 }
-.one {
-   background: #191970;
+.hi {
+    background: #fff;
 }
-.two {
-  background:#000080;
+.fu {
+    background:#000;
 }
-.three {
-  background:#00008B;
+.mi {
+    background:#000;
 }
-
-.four {
-  background: #0000CD;
+.yo {
+    background:#000;
 }
-
-.five {
-  background: #0000FF;
+.i {
+    background:#000;
 }
-.six {
-  background: #4169E1;
+.mu {
+    background:#000;
 }
-.seven {
-  background: #4682B4;
+.na {
+    background:#000;
 }
-.eight {
-  background: #6495ED;
+.ya {
+    background:#000;
 }
-.nine {
-  background: #87CEEB;
+.ko {
+    background:#000;
 }
 .name: hover {
-  border: 10px solid blue;
+    border: 10px solid blue;
 }
