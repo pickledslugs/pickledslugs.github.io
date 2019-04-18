@@ -1,0 +1,45 @@
+.name {
+  background: black;
+  height: 300px;
+  width: 300px;
+  margin: 5px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  grid-auto-rows: minmax(100px, auto);
+    grid-gap:5px; 
+  margin: 0 auto;
+}
+.one {
+   background: #191970;
+}
+.two {
+  background:#000080;
+}
+.three {
+  background:#00008B;
+}
+
+.four {
+  background: #0000CD;
+}
+
+.five {
+  background: #0000FF;
+}
+.six {
+  background: #4169E1;
+}
+.seven {
+  background: #4682B4;
+}
+.eight {
+  background: #6495ED;
+}
+.nine {
+  background: #87CEEB;
+}
+.name: hover {
+  border: 10px solid blue;
+}
