@@ -1,48 +1,58 @@
 body {
-    color: #f00;
     font-family: 'Roboto Mono', monospace;
 }
 header {
-    color: #000;
-    padding: 32px 0 32px;
+    padding: 16px 0 16px;
 }
 footer {
-    padding: 32px 0 32px;
+    padding: 16px 0 16px;
 }
-footer p {
-    font-size: 16px;
-    text-align: center;
-}
-header h1 { 
+h1 { 
     text-align: center; 
     font-size: 32px;
     font-weight: 1;
 }
-header h2 { 
+h2 { 
     text-align: center; 
     font-size: 24px;
     font-weight: 1;
 }
-body h1 { 
-    text-align: center; 
-    font-size: 32px;
+p {
+    text-align: center;
+    font-size: 16px;
     font-weight: 1;
 }
+a:link {
+    color: #f00;
+    text-decoration: none;
+    background-color: #000;
+}
+a:visited {
+    color: #f00;
+}
+a:hover {
+    color: #000;
+    background-color: #f00;
+}
+a:active {
+    color: #000;
+    background-color: #a00; 
+}
 .na {
+    color: #f00;
     background: #f00;
     height: 256px;
     width: 256px;
-    margin: 5px;
+    margin: 0px;
 }
 .container {
     display: grid;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 0 8px 0;
-    grid-template-columns: repeat(auto-fit, minmax(256px, 3fr));
-    grid-gap: 0px 0px;
+    margin: 0px auto;
+    padding: 0px 0px 0px;
+    grid-template-columns: repeat(3, minmax(256px, 1fr));
+    grid-gap: 16px 16px;
     align-items: center;
-
 }
 .hi {
     background: #000;
@@ -71,10 +81,14 @@ body h1 {
 .ko {
     background: #000;
 }
-.na:hover { 
-  background-color: #400;
+.na:hover {
+    color: #000;
+    background-image: url("assets/navi.gif");
+    background-size: contain;
+    box-shadow: inset 0px 0px 24px 4px #a00;
 }
-.ya:hover { 
-    color:black;
-    background-color: #f00;
+.ya:hover {
+    color: #000;
+    background-color: #a00;
+    box-shadow: inset 0px 0px 24px 4px #000;
 }
