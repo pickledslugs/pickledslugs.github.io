@@ -1,11 +1,11 @@
 body {
+    color: #f00;
     font-family: 'Roboto Mono', monospace;
 }
-
 header {
+    color: #000;
     padding: 32px 0 32px;
 }
-
 footer {
     padding: 32px 0 32px;
 }
@@ -13,13 +13,21 @@ footer p {
     font-size: 16px;
     text-align: center;
 }
-
 header h1 { 
     text-align: center; 
-    font-size: 64px;
-    font-weight: 200;
+    font-size: 32px;
+    font-weight: 1;
 }
-
+header h2 { 
+    text-align: center; 
+    font-size: 24px;
+    font-weight: 1;
+}
+body h1 { 
+    text-align: center; 
+    font-size: 32px;
+    font-weight: 1;
+}
 .na {
     background: #f00;
     height: 256px;
@@ -30,9 +38,9 @@ header h1 {
     display: grid;
     max-width: 800px;
     margin: 0 auto;
-    padding: 0 16px 0;
+    padding: 0 8px 0;
     grid-template-columns: repeat(auto-fit, minmax(256px, 3fr));
-    grid-gap: 16px;
+    grid-gap: 0px 0px;
     align-items: center;
 
 }
@@ -40,29 +48,33 @@ header h1 {
     background: #000;
 }
 .fu {
-    background:#000;
+    background: #000;
 }
 .mi {
-    background:#000;
+    background: #000;
 }
 .yo {
-    background:#000;
+    background: #000;
 }
 .i {
-    background:#000;
+    background: #000;
 }
 .mu {
-    background:#000;
+    background: #000;
 }
 .nana {
-    background:#000;
+    background: #000;
 }
 .ya {
-    background:#000;
+    background: #000;
 }
 .ko {
-    background:#000;
+    background: #000;
 }
 .na:hover { 
-  background-color: #0cd;
+  background-color: #400;
+}
+.ya:hover { 
+    color:black;
+    background-color: #f00;
 }
