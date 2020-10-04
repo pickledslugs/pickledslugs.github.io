@@ -1,6 +1,9 @@
 body {
     font-family: 'Roboto Mono', monospace;
 }
+header{
+    padding: 0px 16px;
+}
 main {
     padding: 0px 16px;
 }
@@ -8,7 +11,7 @@ footer {
     padding: 0px 16px;
 }
 h1 {
-    font-size: 128px;
+    font-size: 16px;
     font-weight: 400
 }
 h2 {
@@ -32,5 +35,5 @@ a:hover {
     text-decoration: underline
 }
 a:active {
-    color: #f00
+    color: #0ff
 }
