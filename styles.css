@@ -8,12 +8,13 @@ header{
     width: 100%;
     padding: 0px 16px;
     white-space: nowrap;
-    background-color: #0ff;
+    background-color: #00f;
     color: #fff
 }
 main {
     padding: 0px 16px;
     margin-top: 128px;
+    margin-bottom: 128px
 }
 footer {
     position: fixed;
@@ -21,33 +22,47 @@ footer {
     bottom: 0;
     width: 100%;
     padding: 0px 16px;
-    background-color: #0ff;
+    background-color: #00f;
     color: #fff;
 }
 h1 {
     font-size: 32px;
     font-weight: 400
 }
-h2 {
+p {
     font-size: 16px;
     font-weight: 400
 }
-p {
+h2 {
     text-align: left;
     font-size: 32px;
     font-weight: 700
 }
-a:link {
+h2 a:link {
     color: #00f;
     text-decoration: none
 }
-a:visited {
+h2 a:visited {
     color: #00f
 }
-a:hover {
+h2 a:hover {
     color: #00f;
     text-decoration: underline
 }
-a:active {
+h2 a:active {
+    color: #0ff
+}
+h1 a:link {
+    color: #fff;
+    text-decoration: none
+}
+h1 a:visited {
+    color: #fff
+}
+h1 a:hover {
+    color: #fff;
+    text-decoration: underline
+}
+h1 a:active {
     color: #0ff
 }
