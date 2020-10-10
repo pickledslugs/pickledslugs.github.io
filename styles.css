@@ -13,8 +13,8 @@ header{
 }
 main {
     padding: 0px 16px;
-    margin-top: 128px;
-    margin-bottom: 128px
+    margin-top: 96px;
+    margin-bottom: 96px
 }
 footer {
     position: fixed;
@@ -26,7 +26,7 @@ footer {
     color: #fff;
 }
 h1 {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 400
 }
 p {
