@@ -7,31 +7,34 @@ header{
     top: 0;
     left: 0;
     width: 100%;
-    padding: 8px;
+    padding: .3rem 0rem;
     background-color: #fffd;
 }
 main {
-    margin: 10%;
+    margin-top: 6rem;
+    margin-bottom: 12rem;
 }
 footer {
-    position: fixed;
+    position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
-    padding: 8px;
+    padding: .3rem 0rem;
     background-color: #fffd;
+    border-top: 1px solid #000;
 }
 h1 {
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700
 }
 p {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 400
 }
 h2 {
-    font-size: 32px;
-    font-weight: 700
+    font-size: 1.5rem;
+    font-weight: 700;
+    white-space: nowrap;
 }
 h2 a:link {
     color: #000;
@@ -42,7 +45,6 @@ h2 a:visited {
 }
 h2 a:hover {
     color: #00f;
-    text-decoration: underline
 }
 h2 a:active {
     color: #0ff
@@ -56,7 +58,6 @@ h1 a:visited {
 }
 h1 a:hover {
     color: #00f;
-    text-decoration: underline
 }
 h1 a:active {
     color: #0ff

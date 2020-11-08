@@ -6,17 +6,28 @@
         <link rel="icon" type="image/png" href="assets/favicon.png" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script>
+            $(function(){
+                $("#header").load("header.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
     </head>
     <body>
-        <header> 
-            <h1><a href="index.html">pickledslugs</a></h1>
+        <header>
+            <div id="header"></div>
         </header>
         <main>
             <h2>about</h2>
             <p>i make stuff ✌🤠</p>
         </main>
         <footer>
-            <p>© ██████ "pickledslugs" ███████ 2020 (twenty twenty)</p>
+            <div id="footer"></div>
         </footer>
     </body>
 </html>
