@@ -6,19 +6,28 @@
         <link rel="icon" type="image/png" href="assets/favicon.png" />
         <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="styles.css">
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.js"
+            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+            crossorigin="anonymous">
+        </script>
+        <script>
+            $(function(){
+                $("#header").load("header.html");
+                $("#footer").load("footer.html");
+            });
+        </script>
     </head>
     <body>
-        <header> 
-            <h1><a href="index.html">pickledslugs</a></h1>
-        </header>
+        <div id="header"></div>
         <main>
-            <h2><a href="schedule.html">uni schedule</a></h2>
-            <h2><a href="https://instagram.com/pickledslugs">ig</a></h2>
-            <h2><a href="https://open.spotify.com/user/3135h2jsa9pnpe1cpta19ig6m?si=zIRYgG2uSimtXiieGDYQxQ">spotify</a></h2>
-            <h2><a href="about.html">about</a></h2>
+            <h2><a href="https://instagram.com/pickledslugs">📷 insta</a></h2>
+            <h2><a href="https://open.spotify.com/user/3135h2jsa9pnpe1cpta19ig6m">🎧 spotify</a></h2>
+            <h2><a href="schedule.html">📅 uni schedule</a></h2>
+            <h2><a href="about.html">❓ about</a></h2>
+            <br>
+            <h2></h2>
         </main>
-        <footer>
-            <p>© ██████ "pickledslugs" ███████ 2020 (twenty twenty)</p>
-        </footer>
+        <div id="footer"></div>
     </body>
 </html>
