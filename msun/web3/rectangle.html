@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>четырёхугольник | задание 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../../assets/favicon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Noto Serif', serif;
+                font-size: 32px;
+                margin: auto;
+                margin-top: 48vh;
+            }
+            div{
+                margin: auto;
+            }
+            .marquee{
+                width: 100vw;
+                line-height: 2vh;
+                background-color: #ff0;
+                color: #000;
+                white-space: nowrap;
+                overflow: hidden;
+                box-sizing: border-box;
+            }
+            .marquee p{
+                display: inline-block;
+                padding-left: 100vw;
+                animation: marquee 8s linear infinite;
+            }
+            @keyframes marquee{
+                0%   {transform: translate(-100%, 0)}
+                100% {transform: translate(0, 0)}
+            }
+        </style>
+    </head>
+    <body>
+        <div class="marquee">
+            <p>Прямоугольник — четырёхугольник, у которого все углы прямые (равны 90 градусам).</p>
+        </div>
+    </body>
+</html>
