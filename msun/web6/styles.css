@@ -40,9 +40,13 @@ body {
 .column {
     flex: 50%;
     padding: 10px;
+    min-width: 356px;
 }
 .nav .column{
     padding: 0;
+}
+.nav .column p{
+    float: right; margin-right: 1rem;
 }
 main {
     width: 75vw;
@@ -62,6 +66,7 @@ h2 {
     font-weight: 700;
 }
 ul{
+    white-space: nowrap;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -69,7 +74,8 @@ ul{
     background-color: #fff;
     width: fit-content;
 }
-li{
+.nav li{
+    display: inline-block;
     float: left;
     font-weight: 400;
     font-size: 16px;
@@ -88,4 +94,28 @@ li a:hover:not(.active) {
 .active {
     color: #fad;
     background-color: #000;
+}
+@media screen and (max-width: 600px) {
+    .grid-container {
+        grid-template-areas:
+            'h'
+            'n'
+            'a'
+            's'
+            'f';
+    }
+    .row {
+        flex-direction: column;
+    }
+    .nav .column p{
+        float: none;
+        margin-right: auto;
+        text-align: center;
+    }
+    .nav ul{
+        width: 100%;
+    }
+    .nav li{
+        width: 33.3333%;
+    }
 }
