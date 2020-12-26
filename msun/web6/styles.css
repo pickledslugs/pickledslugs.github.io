@@ -16,7 +16,7 @@
     grid-template-rows: auto auto 1fr auto;
     grid-template-columns: 33 66;
     width: 75vw;
-    min-width: 1050px;
+    min-width: 1200px;
     margin: 0 auto;
 }
 .grid-container > div {
@@ -42,7 +42,7 @@ body {
 }
 .column {
     flex: 50%;
-    padding: 5px;
+    padding: 10px;
     min-width: 320px;
 }
 .nav .column{
@@ -93,7 +93,7 @@ li a:hover:not(.active) {
     color: #fad;
     background-color: #000;
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
     .grid-container {
         grid-template-areas:
             'h'
