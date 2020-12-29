@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>задание 7</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/png" href="../../assets/favicon.png">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <style>
+            body{
+                font-family: 'Roboto', sans-serif;
+                font-size: 16px;
+                width: 75vw;
+                margin: auto;
+            }
+            .container{
+                min-height: 100vh;
+                display: grid;
+                grid-template-rows: auto auto auto;
+                
+            }
+            .center {
+                position: absolute;
+                left: 50%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                padding: 0 1rem;
+                background-color: #eff;
+                border: double;
+            }
+            ul {
+                list-style-type: none;
+                margin: 0;
+            }
+            table, th, td {
+                border-collapse: collapse;
+            }
+            table p{
+                margin: 5px;
+            }
+            form{
+                padding-bottom: 1rem;
+            }
+            .tbl1 .td1{
+                width: 10rem;
+            }
+            .tbl1 tr:nth-child(odd) {
+                background-color: #cee;
+            }
+            .tbl3 table, .tbl3 th, .tbl3 td {
+                border: 2px solid #cee;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="center">
+                <h3>Какое блюдо будете заказывать?</h3>
+                <form style="border-bottom: 1px solid #888">
+                    <table class="tbl1">
+                        <tr>
+                            <td class="td1">
+                                <label for="dish1">Пицца</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="dish1" name="dish1" value="pizza">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dish2">Хот-дог</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="dish2" name="dish2" value="hotdog">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dish3">Гамбургер</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="dish3" name="dish3" value="hamburger">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dish4">Поп-корн</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="dish4" name="dish4" value="popcorn">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dish5">Чупа-чупс</label>
+                            </td>
+                            <td>
+                                <input type="checkbox" id="dish5" name="dish5" value="why">
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="отправить">
+                    <input type="reset" value="сбросить">
+                </form>
+                <h3>Куда доставить заказ?</h3>
+                <form style="border-bottom: 1px solid #888">
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="fname">Имя:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="fname" name="fname"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="lname">Фамилия:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="lname" name="lname"><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">email:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="email" name="email">
+                                <select name="email" id="email">
+                                    <option value="mailru">@mail.ru</option>
+                                    <option value="gmail">@gmail.com</option>
+                                    <option value="icloud">@icloud.com</option>
+                                    <option value="custom">@custom.email</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="street">улица:</label>
+                            </td>
+                            <td>
+                                <select name="street" id="street">
+                                    <option value="str1">Светланская</option>
+                                    <option value="str2">Уборевича</option>
+                                    <option value="str3">Семёновская</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="city">город:</label>
+                            </td>
+                            <td>
+                                <select name="city" id="city">
+                                    <option value="vla">Владивосток</option>
+                                    <option value="art">Артём</option>
+                                    <option value="uss">Уссурийск</option>
+                                </select><br>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="отправить">
+                    <input type="reset" value="сбросить">
+                </form>
+                <h3>Как будете расплачиваться?</h3>
+                <form>
+                    <table class="tbl3">
+                        <tr>
+                            <td>
+                                <input type="radio" id="cash" name="paym" value="cash">
+                                <label for="cash">наличными</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="radio" id="transfer" name="paym" value="transfer">
+                                <label for="transfer">переводом</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>бесконтактной оплатой<p>
+                                <ul>
+                                    <li>
+                                        <input type="radio" id="card" name="paym" value="card">
+                                        <label for="card">карта</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="appl" name="paym" value="appl">
+                                        <label for="appl">Apple Pay</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="gpay" name="paym" value="gpay">
+                                        <label for="gpay">GPay</label>
+                                    </li>
+                                    <li>
+                                        <input type="radio" id="sams" name="paym" value="sams">
+                                        <label for="sams">Samsung Pay</label>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <input type="submit" value="отправить">
+                    <input type="reset" value="сбросить">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
