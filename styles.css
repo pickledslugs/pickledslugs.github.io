@@ -15,7 +15,6 @@ body {
     left: 0;
     width: 100%;
     padding: .3rem 0rem;
-    background-color: #fead;
 }
 main {
     margin-top: 8rem;
@@ -24,7 +23,6 @@ main {
 #footer {
     width: 100%;
     padding: .3rem 0rem;
-    background-color: #afad;
 }
 p {
     font-size: 16px;
