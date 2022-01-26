@@ -1,8 +1,8 @@
 body {
-    font-family: 'Roboto Mono Light', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     text-align: center;
     color: #fff;
-    background-color: #000;
+    background-color: #222;
     margin: 0px;
 }
 #page-container{
@@ -16,7 +16,7 @@ body {
     left: 0;
     width: 100%;
     padding: .3rem 0rem;
-    background-color: #000a;
+    background-color: #2f2f2fee;
 }
 main {
     margin-top: 8rem;
@@ -29,15 +29,24 @@ main {
 p {
     color: #fff;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 300;
+}
+p a:link{
+    color: #fff;
+}
+p a:visited{
+    color: #fff;
+}
+p a:hover{
+    color: #00f;
 }
 h1 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 300;
 }
 h2 {
     font-size: 24px;
-    font-weight: 400;
+    font-weight: 300;
 }
 h2 a:link {
     color: #fff;
@@ -66,4 +75,11 @@ h1 a:hover {
 }
 .yeehaw:hover {
     opacity: 0;
+}
+.cur {
+    animation: blink .5s ease-in-out 0s infinite alternate;
+}
+@keyframes blink {
+    0% {opacity: 1;}
+    100% {opacity: 0;}
 }
