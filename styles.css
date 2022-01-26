@@ -1,7 +1,8 @@
 body {
-    font-family: 'Roboto Mono', monospace;
+    font-family: 'Roboto Mono Light', sans-serif;
     text-align: center;
-    background-color: #fff;
+    color: #fff;
+    background-color: #000;
     margin: 0px;
 }
 #page-container{
@@ -15,6 +16,7 @@ body {
     left: 0;
     width: 100%;
     padding: .3rem 0rem;
+    background-color: #000a;
 }
 main {
     margin-top: 8rem;
@@ -25,33 +27,34 @@ main {
     padding: .3rem 0rem;
 }
 p {
+    color: #fff;
     font-size: 16px;
     font-weight: 400;
 }
 h1 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
 }
 h2 {
     font-size: 24px;
-    font-weight: 700;
+    font-weight: 400;
 }
 h2 a:link {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 h2 a:visited {
-    color: #000;
+    color: #fff;
 }
 h2 a:hover {
     color: #00f;
 }
 h1 a:link {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 h1 a:visited {
-    color: #000;
+    color: #fff;
 }
 h1 a:hover {
     color: #00f;
