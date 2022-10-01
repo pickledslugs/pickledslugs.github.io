@@ -5,9 +5,7 @@ body{
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     color: #fff;
-    background: linear-gradient(-45deg, #00e77c, #0083e7, #ff1b6b); 
-    background-size: max(500vh, 500vw) min(500vh, 500vw);
-    animation: gradient 10s ease infinite;
+    background-color: #111;
     height: 100vh;
     margin: 0;
 }
@@ -16,39 +14,92 @@ body{
     display: grid;
     grid-template-rows: 1fr auto;
 }
-#header{
+#grid-container{
+    display: grid;
+}
+@media only screen and (min-width: 601px){       /* desktop */
+    #grid-container{
+        grid-template-areas: 'pic ttl'
+                             'pic inf'
+                             'pic btn'
+    }
+    #title h2{
+        font-size: 24px;
+        margin-left: 1rem;
+    }
+    #info{
+        margin-left: 1rem;
+    }
+    #pic{
+        margin: auto;
+        margin-right: 1rem;
+        width: 256px;
+        height: 256px;
+    }
+    #buttons{
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-left: .5rem;
+    }
+    
+    main{
+        width: min(max(50vw, 800px), calc(100% - 4rem));
+        margin: 8rem auto 2rem auto;
+    }
+    .bodywidth{
+        width: min(max(50vw, 800px), calc(100% - 4rem));
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 600px){       /* portable */
+    #grid-container{
+        grid-template-areas: 'pic ttl'
+                             'inf inf'
+                             'btn btn';
+    }
+    #title h2{
+        font-size: 20px;
+        word-spacing: 100vw;
+    }
+    #pic{
+        margin: auto 1rem auto 0;
+        width: 64px;
+        height: 64px;
+    }
+    #buttons{
+        flex-direction: column;
+    }
+    main{
+        margin: 8rem 2rem 2rem 2rem;
+    }
+    .bodywidth{
+        margin: 0 2rem;
+    }
+}
+header{
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     border-bottom: 1px solid #fff4;
-    background-color: #0004;
+    background-color: #111e;
     white-space: nowrap;
 }
-#header h1{
-    padding: 0.3rem 5vh;
+header h1{
+    padding: .3rem 0;
     font-family: 'Roboto';
     font-weight: 700;
     font-style: italic;
     color: #fff;
+    letter-spacing: -.05rem;
 }
-#header a:hover{
-    color: #fff;
-}
-main {
-    margin: 8rem 5vh 2.5rem 5vh;
-    overflow-x: hidden;
-}
-.calendar {
-    width: calc(100vw - 10vh);
-}
-#footer{
-    width: 100%;
+footer{
+    width: 100vw;
     border-top: 1px solid #fff4;
 }
-#footer p{
-    padding: .3rem 5vh;
-    font-size: min(16px, 3.36vw);
+footer p{
+    padding: .3rem 0;
+    font-size: min(16px, 3.38vw);
 }
 p{
     color: #fff;
@@ -64,18 +115,30 @@ h1{
 h2{
     font-size: 24px;
 }
-a:link{
+a:link, a:visited{
     color: #fff;
     text-decoration: none;
 }
-a:visited{
-    color: #fff;
-}
 main a:hover{
-    color: #00f;
+    color: #4af;
+}
+#title{
+    grid-area: ttl;
+}
+#info{
+    grid-area: inf;
 }
 #buttons{
-    padding: 2rem 0rem;
+    display: flex;
+    grid-area: btn;
+    margin-top: 1rem;
+}
+#calendar{
+    width: auto;
+    background-color: #e3e9ff;
+    border-top: .25rem solid #e3e9ff;
+    border-bottom: .25rem solid #e3e9ff;
+    border-radius: .25rem;
 }
 .button{
     background-color: #0004;
@@ -87,21 +150,48 @@ main a:hover{
     cursor: pointer;
     transition-duration: .25s;
     border: 1px solid #fff;
-    border-radius: .25rem;
+    border-radius: .5rem;
+    margin: .5rem;
+    white-space: nowrap;
+    animation-name: breathe;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
 }
 .button:hover{
-    background-color: #fff;
+    color: #fff;
+    margin: .25rem;
+    padding: 1.25rem;
+    box-shadow: 0 0 2rem -.75rem #fff;
     color: #000;
+    background-color: #fff;
 }
 .cur{
     animation: blink .5s ease-in-out 0s infinite alternate;
+}
+#pic{
+    align-items: right;
+    grid-area: pic;
+    border-radius: 50%;
+    background-image: url('assets/pfp.jpg');
+    background-size: 100%;
+}
+.btn1{
+    animation-delay: 0s;
+}
+.btn2{
+    animation-delay: .25s;
+}
+.btn3{
+    animation-delay: .5s;
 }
 @keyframes blink{
     0%   {opacity: 1;}
     100% {opacity: 0;}
 }
-@keyframes gradient {
-	0%   {background-position: 0% 50%;}
-	50%  {background-position: 100% 50%;}
-	100% {background-position: 0% 50%;}
+@keyframes breathe{
+    0%   {}
+    100% {box-shadow: 0 0 2rem -.75rem rgb(255, 255, 255)} 
 }
