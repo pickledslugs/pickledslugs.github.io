@@ -21,7 +21,7 @@ function mapCreate(size) {
 function mapFill(map) {
     for (let i = randInt(halfMapSize) + 1; i < randInt(halfMapSize) + halfMapSize; i++) {
         for (let j = randInt(halfMapSize) + 1; j < randInt(halfMapSize) + halfMapSize; j++) {
-            randInt(10) ? map[i][j] = '🏝' : map[i][j] = '⠀';
+            randInt(10) ? map[i][j] = '🏝️' : map[i][j] = '⠀';
         }
         iterCounter = i;
     }
