@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+    <title>islGen</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            color: #fff;
+            background-color: #111;
+            height: 100vh;
+            margin: 0;
+        }
+        .app{
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 300;
+            font-size: min(10px, 1.25vw);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <script src="islGenW.js"></script>
+        <button onClick="window.location.reload();">Refresh</button>
+    </div>
+</body>
+</html>
