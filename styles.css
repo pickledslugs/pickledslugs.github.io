@@ -153,12 +153,6 @@ main a:hover{
     border-radius: .5rem;
     margin: .5rem;
     white-space: nowrap;
-    animation-name: breathe;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-
 }
 .button:hover{
     color: #fff;
@@ -178,13 +172,18 @@ main a:hover{
     background-image: url('assets/pfp.jpg');
     background-size: 100%;
 }
-.btn1{
-    animation-delay: 0s;
+.btnBreathe{
+    animation-name: breathe;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
-.btn2{
+
+.btn1{
     animation-delay: .25s;
 }
-.btn3{
+.btn2{
     animation-delay: .5s;
 }
 @keyframes blink{
