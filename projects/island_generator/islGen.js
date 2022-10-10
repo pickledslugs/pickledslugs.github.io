@@ -74,17 +74,13 @@ function mapFill(map) {
 }
 
 function mapLog(map) {
-    document.write(`<div id='map' style='display: grid; grid-template-columns:`);
-    for (let i = 0; i < mapSize; i++) {
-        document.write(` auto`)
-    }
-    document.write(`'>`);
-    for (let i = 0; i < mapSize; i++) {
-        for (let j = 0; j < mapSize; j++) {
-            document.write(map[i][j].toString());
-        }
-    }
-    document.write('</div>');
+		document.write(`<div id='map' style='display: grid; grid-template-columns: repeat(${mapSize}, auto);'>`);
+		for (let i = 0; i < mapSize; i++) {
+				for (let j = 0; j < mapSize; j++) {
+						document.write(map[i][j].toString());
+				}
+		}
+		document.write('</div>');
 }
 
 function mapSizeIsValid(size) {
