@@ -21,7 +21,7 @@ body{
     #grid-container{
         grid-template-areas: 'pic ttl'
                              'pic inf'
-                             'pic btn'
+                             ' .  prj'
     }
     #title h2{
         font-size: 24px;
@@ -36,10 +36,13 @@ body{
         width: 256px;
         height: 256px;
     }
-    #buttons{
+    #projects{
+        margin-left: 1rem;
+    }
+    .buttons{
         flex-direction: row;
         flex-wrap: wrap;
-        margin-left: .5rem;
+        margin-left: -.5rem;
     }
     
     main{
@@ -55,7 +58,7 @@ body{
     #grid-container{
         grid-template-areas: 'pic ttl'
                              'inf inf'
-                             'btn btn';
+                             'prj prj'
     }
     #title h2{
         font-size: 20px;
@@ -66,7 +69,7 @@ body{
         width: 64px;
         height: 64px;
     }
-    #buttons{
+    .buttons{
         flex-direction: column;
     }
     main{
@@ -128,10 +131,13 @@ main a:hover{
 #info{
     grid-area: inf;
 }
-#buttons{
+.buttons{
     display: flex;
-    grid-area: btn;
     margin-top: 1rem;
+}
+#projects{
+    margin-top: 2rem;
+    grid-area: prj;
 }
 #calendar{
     width: auto;

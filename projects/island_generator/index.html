@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>island generator - pickledslugs</title>
+        <title>🏝️ island generator - pickledslugs</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
         <link rel="icon" type="image/png" href="../../assets/favicon.png">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,31 +23,41 @@
             #app{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: center;
-                background-color: #08c;
+                background-color: #034;
                 border-radius: .25rem;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
             }
             #map{
-                font-size: .57vmin;
-                color: #4c0;
-                text-align: center;
+                height: min(320px, calc(100vw - 6rem));
+                width: min(320px, calc(100vw - 6rem));
+                border: 1px solid #fff;
+                border-radius: inherit;
+                background-color: #08c;
+            }
+            .isl0{
+                background-color: #4b0;
+            }
+            .isl1{
+                background-color: #ca4;
+            }
+            .isl2{
+                background-color: #890;
             }
         </style>
     </head>
     <body>
-        <!-- <header></header> -->
+        <header></header>
         <div id="page-container">
             <main>
-                <h2>island generator</h2>
+                <h2>🏝️ island generator</h2>
                 <div id="app">
-                    <br>
                     <script src="islGen.js"></script>
-                    <button class="button" onClick="location.reload();">refresh</button>
-                    <br>
+                    <button class="button" onClick="location.reload();" style="font-family: inherit; font-weight: inherit; font-size: inherit;">refresh</button>
                 </div>
             </main>
-            <!-- <footer></footer> -->
+            <footer></footer>
         </div>
     </body>
 </html>
