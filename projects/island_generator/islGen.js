@@ -105,7 +105,7 @@ function getMapSize() {
     // do {
     //     size = prompt('map size (5 - 100):', 50);
     // } while (!mapSizeIsValid(size))
-    size = 64;
+    size = 10 + randInt(91);
     return size;
 }
 
