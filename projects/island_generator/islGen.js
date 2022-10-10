@@ -19,11 +19,56 @@ function mapCreate(size) {
 }
 
 function mapFill(map) {
-    for (let i = randInt(halfMapSize) + 1; i < randInt(halfMapSize) + halfMapSize; i++) {
-        for (let j = randInt(halfMapSize) + 1; j < randInt(halfMapSize) + halfMapSize; j++) {
-            randInt(10) ? map[i][j] = `<div class='cell row_${i+1} col_${j+1} isl${randInt(3)}'></div>` : map[i][j] = `<div class='cell row_${i+1} col_${j+1} sea'></div>`;
+    let i, j, lndCell;
+    i = j = halfMapSize;
+    for (let k = 0; k < (mapSize * (halfMapSize + Math.floor(Math.random() * halfMapSize))); k++){
+        lndCell = `<div class='cell row_${i+1} col_${j+1} isl${randInt(3)}'></div>`;
+        if (i > 1 && i < (mapSize - 2) && j > 1 && j < (mapSize - 2)) {
+            switch (randInt(8)) {
+                case 0:
+                    map[i-1][j]   = lndCell;  // n
+                    i--;
+                    break;
+                case 1:
+                    map[i-1][j+1] = lndCell;  // ne
+                    i--;
+                    j++;
+                    break;
+                case 2:
+                    map[i][j+1]   = lndCell;  // e
+                    j++
+                    break;
+                case 3:
+                    map[i+1][j+1] = lndCell;  // se
+                    i++;
+                    j++;
+                    break;
+                case 4:
+                    map[i+1][j]   = lndCell;  // s
+                    i++;
+                    break;
+                case 5:
+                    map[i+1][j-1] = lndCell;  // sw
+                    i++;
+                    j--;
+                    break;
+                case 6:
+                    map[i][j-1]   = lndCell;  // w
+                    j--;
+                    break;
+                case 7:
+                    map[i-1][j-1] = lndCell;  // nw
+                    i--;
+                    j--;
+                    break;
+                default:
+                    i = j = halfMapSize;
+                    break;
+            }
+        } else {
+            i = j = halfMapSize;
         }
-        iterCounter = i;
+        iterCounter = k;
     }
     return map;
 }
@@ -57,9 +102,10 @@ function mapSizeIsValid(size) {
 }
 
 function getMapSize() {
-    do {
-        size = prompt('map size (5 - 100):', 50);
-    } while (!mapSizeIsValid(size))
+    // do {
+    //     size = prompt('map size (5 - 100):', 50);
+    // } while (!mapSizeIsValid(size))
+    size = 64;
     return size;
 }
 
