@@ -8,34 +8,29 @@ const randInt = max => Math.floor(Math.random() * max);
 refreshBtn.addEventListener('click', () => mapCreator());
 
 const mapCreator = () => {
-	iterCounter = 0;
-	mapSize = getMapSize();
-	halfMapSize = Math.floor(mapSize / 2);
-
-	mapElement.innerHTML = '';
-
-	mapDraw(
-		mapFill(mapCreate(mapSize))
-	);
-
-	//* write caption
-	mapCaption.innerHTML = `
-		<p>map size: ${Math.ceil(mapSize)} x ${Math.ceil(mapSize)}</p>
-		<p>${iterCounter} iterations</p>
-	`;
+    iterCounter = 0;
+    mapSize = getMapSize();
+    halfMapSize = Math.floor(mapSize / 2);
+    mapElement.innerHTML = '';
+    mapDraw(
+        mapFill(mapCreate(mapSize))
+    );
+    // write caption
+    mapCaption.innerHTML = `
+        <p>map size: ${Math.ceil(mapSize)} x ${Math.ceil(mapSize)}</p>
+        <p>${iterCounter} iterations</p>
+    `;
 }
 
 function mapCreate(size) {
     const map = [];
-
-		for (let i = 0; i < size; i++) {
+        for (let i = 0; i < size; i++) {
         map[i] = [];
         for (let j = 0; j < size; j++) {
             map[i][j] = `<div class='cell row_${i+1} col_${j+1} sea'></div>`;
         }
     }
-
-		return map;
+    return map;
 }
 
 function mapFill(map) {
@@ -94,21 +89,18 @@ function mapFill(map) {
 }
 
 function mapDraw(map) {
-		mapElement.style = `grid-template-columns: repeat(${mapSize}, auto);`;
-		for (let i = 0; i < mapSize; i++) {
-			mapElement.innerHTML += [...map[i]].join('');			
-		}
+    mapElement.style = `grid-template-columns: repeat(${mapSize}, auto);`;
+    for (let i = 0; i < mapSize; i++) {
+        mapElement.innerHTML += [...map[i]].join('');
+    }
 }
 
 function validateMapSize(size) {
     let isValid = false;
-
     if (Number.isInteger(+size)) {
         if (size >= 5 && size <= 100) isValid = true
-				else alert('map size should be an integer between 5 and 100')
-    } 
-		else size ? alert(`${size} is not a number`) : alert(`enter a number`);
-
+            else alert('map size should be an integer between 5 and 100')
+    } else size ? alert(`${size} is not a number`) : alert(`enter a number`);
     return isValid;
 }
 
