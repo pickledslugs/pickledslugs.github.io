@@ -1,0 +1,26 @@
+#app {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #034;
+	border-radius: .25rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+}
+
+#map{
+	display: grid; 
+	height: min(320px, calc(100vw - 6rem));
+	width: min(320px, calc(100vw - 6rem));
+	border: 1px solid #fff;
+	border-radius: inherit;
+	background-color: #08c;
+}
+
+.isl0 {	background-color: #4b0; }
+.isl1 {	background-color: #ca4; }
+.isl2 {	background-color: #890; }
+
+.button {
+	font-family: inherit; font-weight: inherit; font-size: inherit;
+}
