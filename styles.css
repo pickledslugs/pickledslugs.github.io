@@ -146,6 +146,24 @@ main a:hover{
     border-bottom: .25rem solid #e3e9ff;
     border-radius: .25rem;
 }
+.fade1{
+    animation: fade 1s ease-in .5s backwards;
+}
+.fade2 {
+    animation: fade 1s ease-in .6s backwards;
+}
+.fade3 {
+    animation: fade 1s ease-in .7s backwards;
+}
+.fade4 {
+    animation: fade 1s ease-in .8s backwards;
+}
+.fade5 {
+    animation: fade 1s ease-in .9s backwards;
+}
+.fade6 {
+    animation: fade 1s ease-in 1s backwards;
+}
 .button{
     background-color: #0004;
     color: #fff;
@@ -167,6 +185,12 @@ main a:hover{
     box-shadow: 0 0 2rem -.75rem #fff;
     color: #000;
     background-color: #fff;
+}
+.button:active{
+    background-color: #0004;
+    color: #fff;
+    box-shadow: none;
+    transition-duration: .1s;
 }
 .cur{
     animation: blink .5s ease-in-out 0s infinite alternate;
@@ -192,11 +216,12 @@ main a:hover{
 .btn2{
     animation-delay: .5s;
 }
+@keyframes fade {
+    from {opacity: 0;}
+}
 @keyframes blink{
-    0%   {opacity: 1;}
-    100% {opacity: 0;}
+    to {opacity: 0;}
 }
 @keyframes breathe{
-    0%   {}
-    100% {box-shadow: 0 0 2rem -.75rem rgb(255, 255, 255)} 
+    to {box-shadow: 0 0 2rem -.75rem rgb(255, 255, 255)} 
 }
