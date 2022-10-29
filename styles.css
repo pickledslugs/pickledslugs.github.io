@@ -1,7 +1,8 @@
-*{
+* {
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
     color: #fff;
@@ -9,77 +10,93 @@ body{
     height: 100vh;
     margin: 0;
 }
-#page-container{
+
+#page-container {
     min-height: 100vh;
     display: grid;
     grid-template-rows: 1fr auto;
 }
-#grid-container{
+
+#grid-container {
     display: grid;
 }
+
 @media only screen and (min-width: 601px){       /* desktop */
-    #grid-container{
+    #grid-container {
         grid-template-areas: 'pic ttl'
                              'pic inf'
                              ' .  prj'
     }
-    #title h2{
+
+    #title h2 {
         font-size: 24px;
         margin-left: 1rem;
     }
-    #info{
+
+    #info {
         margin-left: 1rem;
     }
-    #pic{
+
+    #pic {
         margin: auto;
         margin-right: 1rem;
         width: 256px;
         height: 256px;
     }
-    #projects{
+
+    #projects {
         margin-left: 1rem;
     }
-    .buttons{
+
+    .buttons {
         flex-direction: row;
         flex-wrap: wrap;
         margin-left: -.5rem;
     }
-    
+
     main{
         width: min(max(50vw, 800px), calc(100% - 4rem));
         margin: 8rem auto 2rem auto;
     }
-    .bodywidth{
+
+    .bodywidth {
         width: min(max(50vw, 800px), calc(100% - 4rem));
         margin: 0 auto;
     }
 }
+
 @media only screen and (max-width: 600px){       /* mobile */
-    #grid-container{
+    #grid-container {
         grid-template-areas: 'pic ttl'
                              'inf inf'
                              'prj prj'
     }
-    #title h2{
+
+    #title h2 {
         font-size: 20px;
         word-spacing: 100vw;
     }
-    #pic{
+
+    #pic {
         margin: auto 1rem auto 0;
         width: 64px;
         height: 64px;
     }
-    .buttons{
+
+    .buttons {
         flex-direction: column;
     }
-    main{
+
+    main {
         margin: 5rem 2rem 2rem 2rem;
     }
-    .bodywidth{
+
+    .bodywidth {
         margin: 0 2rem;
     }
 }
-header{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -88,7 +105,8 @@ header{
     background-color: #111e;
     white-space: nowrap;
 }
-header h1{
+
+header h1 {
     padding: .3rem 0;
     font-family: 'Roboto';
     font-weight: 700;
@@ -96,75 +114,71 @@ header h1{
     color: #fff;
     letter-spacing: -.05rem;
 }
-footer{
+
+footer {
     width: 100vw;
     border-top: 1px solid #fff4;
 }
-footer p{
+
+footer p {
     padding: .3rem 0;
     font-size: min(16px, 3.38vw);
 }
-p{
+
+p {
     color: #fff;
     font-size: 16px;
 }
-p a:link{
+
+p a:link {
     color: #fff;
     text-decoration: underline;
 }
-h1{
+
+h1 {
     font-size: 24px;
 }
-h2{
+
+h2 {
     font-size: 24px;
 }
-a:link, a:visited{
+
+a:link, a:visited {
     color: #fff;
     text-decoration: none;
 }
-main a:hover{
+
+main a:hover {
     color: #4af;
 }
-#title{
+
+#title {
     grid-area: ttl;
 }
-#info{
+
+#info {
     grid-area: inf;
 }
-.buttons{
+
+.buttons {
     display: flex;
     margin-top: 1rem;
 }
-#projects{
+
+#projects {
     margin-top: 2rem;
     grid-area: prj;
 }
-#calendar{
+
+#calendar {
     width: auto;
     background-color: #e3e9ff;
     border-top: .25rem solid #e3e9ff;
     border-bottom: .25rem solid #e3e9ff;
     border-radius: .25rem;
 }
-.fade1{
-    animation: fade 1s ease-in .5s backwards;
-}
-.fade2 {
-    animation: fade 1s ease-in .6s backwards;
-}
-.fade3 {
-    animation: fade 1s ease-in .7s backwards;
-}
-.fade4 {
-    animation: fade 1s ease-in .8s backwards;
-}
-.fade5 {
-    animation: fade 1s ease-in .9s backwards;
-}
-.fade6 {
-    animation: fade 1s ease-in 1s backwards;
-}
-.button{
+
+.button {
     background-color: #0004;
     color: #fff;
     padding: 1rem;
@@ -178,7 +192,8 @@ main a:hover{
     margin: .5rem;
     white-space: nowrap;
 }
-.button:hover{
+
+.button:hover {
     color: #fff;
     margin: .25rem;
     padding: 1.25rem;
@@ -186,42 +201,78 @@ main a:hover{
     color: #000;
     background-color: #fff;
 }
-.button:active{
+
+.button:active {
     background-color: #0004;
     color: #fff;
     box-shadow: none;
-    transition-duration: .1s;
+    transition-duration: 0s;
 }
-.cur{
+
+.cur {
     animation: blink .5s ease-in-out 0s infinite alternate;
 }
-#pic{
+
+#pic {
     align-items: right;
     grid-area: pic;
     border-radius: 50%;
     background-image: url('assets/pfp.jpg');
     background-size: 100%;
 }
-.btnBreathe{
-    animation-name: breathe;
-    animation-duration: 1s;
-    animation-timing-function: ease-in-out;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+
+.fade {
+    animation: fade 1s ease-in backwards;
 }
 
-.btn1{
+.fade1 {
+    animation: fade 1s ease-in .5s backwards;
+}
+
+.fade2 {
+    animation: fade 1s ease-in .6s backwards;
+}
+
+.fade3 {
+    animation: fade 1s ease-in .7s backwards;
+}
+
+.fade4 {
+    animation: fade 1s ease-in .8s backwards;
+}
+
+.fade5 {
+    animation: fade 1s ease-in .9s backwards;
+}
+
+.fade6 {
+    animation: fade 1s ease-in 1s backwards;
+}
+
+.btnBreathe {
+    animation: breathe 1s ease-in-out infinite alternate;
+}
+
+.btnBreathe:nth-child(2) {
     animation-delay: .25s;
 }
-.btn2{
+
+.btnBreathe:nth-child(3) {
     animation-delay: .5s;
 }
+
+.btnBreathe:nth-child(4) {
+    animation-delay: .75s;
+}
+
 @keyframes fade {
     from {opacity: 0;}
 }
-@keyframes blink{
+
+@keyframes blink {
     to {opacity: 0;}
 }
-@keyframes breathe{
+
+@keyframes breathe {
     to {box-shadow: 0 0 2rem -.75rem rgb(255, 255, 255)} 
 }
