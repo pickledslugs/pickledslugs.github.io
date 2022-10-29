@@ -6,18 +6,22 @@ const loadTime = document.querySelector('.loadTime');
 function buildLayout() {
     header.innerHTML = `
         <div class="bodywidth">
-        <h1><a href="/" title="home">pickledslugs<span class="cur">_</span></a></h1>
+            <h1><a href="/" title="home">pickledslugs<span class="cur">_</span></a></h1>
         </div>
     `;
-    
     footer.innerHTML = `
         <div class="bodywidth">
-        <p>© pickledslugs '22 (twenty twenty two)
+            <div id='fLeft'>
+                <p>© pickledslugs '22 (twenty twenty two)
+            </div>
+            <div id='fRight'>
+                <p id="coords">x = 0, y = 0
+            </div>
         </div>
     `;
 }
 
-function errPage() {
+function notFound() {
     path.innerHTML = window.location.href.toString().slice(30);
     window.onload = function() {
         loadTime.innerHTML = (window.performance.timing.domContentLoadedEventEnd - window.performance.timing.navigationStart) / 1000;
@@ -30,3 +34,23 @@ function hello() {
 }
 
 buildLayout();
+
+const trailer = document.getElementById("trailer");
+const coords = document.getElementById("coords");
+
+const animateTrailer = e => {
+  const x = e.clientX - trailer.offsetWidth / 2,
+        y = e.clientY - trailer.offsetHeight / 2;
+        coords.innerHTML = `x = ${e.clientX}, y = ${e.clientY}`;
+  
+  const keyframes = {
+    transform: `translate(${x}px, ${y}px)`
+  }
+  
+  trailer.animate(keyframes, { 
+    duration: 5000, 
+    fill: "forwards" 
+  });
+}
+
+window.onmousemove = e => {animateTrailer(e);}

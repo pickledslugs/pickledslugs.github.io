@@ -40,6 +40,7 @@ body {
     #pic {
         margin: auto;
         margin-right: 1rem;
+        margin-top: 1rem;
         width: 256px;
         height: 256px;
     }
@@ -51,7 +52,6 @@ body {
     .buttons {
         flex-direction: row;
         flex-wrap: wrap;
-        margin-left: -.5rem;
     }
 
     main{
@@ -91,6 +91,10 @@ body {
         margin: 5rem 2rem 2rem 2rem;
     }
 
+    #fRight {
+        display: none;
+    }
+
     .bodywidth {
         margin: 0 2rem;
     }
@@ -116,13 +120,27 @@ header h1 {
 }
 
 footer {
-    width: 100vw;
+    width: 100%;
     border-top: 1px solid #fff4;
+}
+
+footer .bodywidth {
+    display: grid;
+    grid-template-areas: 'fl fr';
 }
 
 footer p {
     padding: .3rem 0;
     font-size: min(16px, 3.38vw);
+}
+
+#fLeft {
+    grid-area: fl;
+}
+
+#fRight{
+    grid-area: fr;
+    text-align: right;
 }
 
 p {
@@ -162,7 +180,8 @@ main a:hover {
 
 .buttons {
     display: flex;
-    margin-top: 1rem;
+    margin-top: 2rem;
+    gap: 1rem;
 }
 
 #projects {
@@ -189,13 +208,12 @@ main a:hover {
     transition-duration: .25s;
     border: 1px solid #fff;
     border-radius: .5rem;
-    margin: .5rem;
     white-space: nowrap;
 }
 
 .button:hover {
     color: #fff;
-    margin: .25rem;
+    margin: -.25rem;
     padding: 1.25rem;
     box-shadow: 0 0 2rem -.75rem #fff;
     color: #000;
@@ -207,6 +225,27 @@ main a:hover {
     color: #fff;
     box-shadow: none;
     transition-duration: 0s;
+}
+
+.card {
+    display: grid;
+    place-items: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 0 100vmax #000a;
+}
+.card:hover{
+    color:inherit;
+    box-shadow: inherit;
+}
+
+.cardIsl{
+    background-image: url(/assets/islBlur.png);
+}
+
+.cardCub{
+    background-image: url(/assets/cubeBlur.png);
 }
 
 .cur {
@@ -275,4 +314,20 @@ main a:hover {
 
 @keyframes breathe {
     to {box-shadow: 0 0 2rem -.75rem rgb(255, 255, 255)} 
+}
+
+#coords {
+    right: 0px;
+}
+
+#trailer {
+    width: 100vmax;
+    aspect-ratio: 1 / 1;
+    background: radial-gradient(#080808 50%, #0000 55%);
+    border-radius: 50%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: -1000;
+    pointer-events: none;
 }
