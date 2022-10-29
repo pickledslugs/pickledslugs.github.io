@@ -1,6 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta http-equiv='refresh' content='0; URL=/'>
+    <!-- <meta http-equiv='refresh' content='0; URL=/404.html'> -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>pickledslugs</title>
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles.css">
+    <style>
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 8rem
+        }
+        main h1 {
+            font-size: min(8vw, 64px);
+            line-height: 1;
+        }
+        .path {
+            word-break: break-all;
+        }
+        .monoB {
+            color: #66D9EF;
+        }
+        #msg {
+            display: none;
+        }
+        .monoY {
+            color: #E6DB74
+        }
+        .monoR {
+            color: #F92672
+        }
+        .monoP {
+            color: #AE81FF
+        }
+        .indent {
+            white-space: pre-wrap;
+        }
+    </style>
 </head>
+<body>
+    <header></header>
+    <div id="page-container">
+        <main>
+            <h1>(╯°□°)╯︵ ┻━┻</h1>
+            <div id="err">
+                <p>
+                    <span class="monoR">Error 404: <span class="path"></span> was not found</span><br>
+                    <span class="indent">    @</span> <a href="/" class="monoB">pickledslugs.github.io</a><br>
+                    <br>
+                    <span id="msg" class="monoY">
+                        <span class="monoB">[Done]</span> exited with <span class="monoR">code=1</span> in <span class="monoP loadTime"></span> seconds
+                    </span>
+                </p>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <script src="/main.js"></script>
+    <script>
+        window.errPage()
+    </script>
+</body>
 </html>
