@@ -105,9 +105,11 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid #fff4;
-    background-color: #111e;
+    border-bottom: 1px solid #fff1;
+    background-color: #111c;
     white-space: nowrap;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 header h1 {
@@ -117,11 +119,12 @@ header h1 {
     font-style: italic;
     color: #fff;
     letter-spacing: -.05rem;
+    user-select: none;
 }
 
 footer {
     width: 100%;
-    border-top: 1px solid #fff4;
+    border-top: 1px solid #fff1;
 }
 
 footer .bodywidth {
@@ -220,13 +223,6 @@ main a:hover {
     background-color: #fff;
 }
 
-.button:active {
-    background-color: #0004;
-    color: #fff;
-    box-shadow: none;
-    transition-duration: 0s;
-}
-
 .card {
     display: grid;
     place-items: center;
@@ -317,13 +313,15 @@ main a:hover {
 }
 
 #coords {
-    right: 0px;
+    user-select: none;
+    filter: blur(1px);
 }
 
 #trailer {
-    width: 100vmax;
+    width: 75vmax;
     aspect-ratio: 1 / 1;
-    background: radial-gradient(#080808 50%, #0000 55%);
+    background-color: #080808;
+    filter: blur(16px);
     border-radius: 50%;
     position: fixed;
     left: 0px;
