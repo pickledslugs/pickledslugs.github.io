@@ -12,7 +12,7 @@ function buildLayout() {
     footer.innerHTML = `
         <div class="bodywidth">
             <div id='fLeft'>
-                <p>© pickledslugs '22 (twenty twenty two)
+                <p>© pickledslugs '23 (twenty twenty three)
             </div>
             <div id='fRight'>
                 <p id="coords">x = 0, y = 0
