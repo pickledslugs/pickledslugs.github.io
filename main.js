@@ -6,15 +6,20 @@ const loadTime = document.querySelector('.loadTime');
 function buildLayout() {
     header.innerHTML = `
         <div class="bodywidth">
-            <h1><a href="/" title="home">pickledslugs<span class="cur">_</span></a></h1>
+            <div class='left'>
+                <h1><a href="/" title="home">pickledslugs<span class="cur">_</span></a></h1>
+            </div>
+            <div class='right'>
+                <p>theme 🌓 (WIP)
+            </div>
         </div>
     `;
     footer.innerHTML = `
         <div class="bodywidth">
-            <div id='fLeft'>
-                <p>© pickledslugs '22 (twenty twenty two)
+            <div class='left'>
+                <p>© pickledslugs '23 (twenty twenty three)
             </div>
-            <div id='fRight'>
+            <div class='right'>
                 <p id="coords">x = 0, y = 0
             </div>
         </div>
