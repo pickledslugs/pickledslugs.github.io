@@ -2,11 +2,52 @@
     box-sizing: border-box;
 }
 
+:root{
+    --white: #fff;
+    --light: #eee;
+    --light-cc: #eeec;
+    --darker-light: #c8c8c8;
+    --black: #000;
+    --darker-dark: #080808;
+    --dark: #111;
+    --dark-cc: #111c;
+    --white-11: #fff1;
+    --black-11: #0001;
+    --black-44: #0004;
+    --white-44: #fff4;
+    --black-aa: #000a;
+    --white-aa: #fffa;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --text-color: var(--black);
+        --bg-color: var(--light);
+        --trailer-color: var(--darker-light);
+        --header-color: var(--light-cc);
+        --border-color: var(--black-11);
+        --button-bg-color: var(--white-44);
+        --card-overlay-color: var(--white-aa)
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --text-color: var(--white);
+        --bg-color: var(--dark);
+        --trailer-color: var(--darker-dark);
+        --header-color: var(--dark-cc);
+        --border-color: var(--white-11);
+        --button-bg-color: var(--black-44);
+        --card-overlay-color: var(--black-aa)
+    }
+}
+
 body {
     font-family: 'Roboto Mono', monospace;
     font-weight: 300;
-    color: #fff;
-    background-color: #111;
+    color: var(--text-color);
+    background-color: var(--bg-color);
     height: 100vh;
     margin: 0;
 }
@@ -91,7 +132,7 @@ body {
         margin: 5rem 2rem 2rem 2rem;
     }
 
-    #fRight {
+    #coords {
         display: none;
     }
 
@@ -105,31 +146,37 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid #fff1;
-    background-color: #111c;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--header-color);
     white-space: nowrap;
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
 }
 
-header h1 {
+header .bodywidth,
+footer .bodywidth {
+    display: grid;
+    align-items: center;
+    grid-template-areas: 'l r';
+}
+
+header h1,
+header h1 a:link,
+header h1 a:visited {
     padding: .3rem 0;
     font-family: 'Roboto';
+    font-size: 24px;
     font-weight: 700;
     font-style: italic;
-    color: #fff;
+    color: var(--text-color);
     letter-spacing: -.05rem;
     user-select: none;
+    text-decoration: none;
 }
 
 footer {
     width: 100%;
-    border-top: 1px solid #fff1;
-}
-
-footer .bodywidth {
-    display: grid;
-    grid-template-areas: 'fl fr';
+    border-top: 1px solid var(--border-color);
 }
 
 footer p {
@@ -137,24 +184,22 @@ footer p {
     font-size: min(16px, 3.38vw);
 }
 
-#fLeft {
-    grid-area: fl;
+.left {
+    grid-area: l;
 }
 
-#fRight{
-    grid-area: fr;
+.right{
+    grid-area: r;
     text-align: right;
 }
 
-p {
-    color: #fff;
+p,
+a:link,
+a:visited {
+    color: var(--text-color);
     font-size: 16px;
 }
 
-p a:link {
-    color: #fff;
-    text-decoration: underline;
-}
 
 h1 {
     font-size: 24px;
@@ -162,11 +207,6 @@ h1 {
 
 h2 {
     font-size: 24px;
-}
-
-a:link, a:visited {
-    color: #fff;
-    text-decoration: none;
 }
 
 main a:hover {
@@ -187,6 +227,12 @@ main a:hover {
     gap: 1rem;
 }
 
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0 0 0;
+}
+
 #projects {
     margin-top: 2rem;
     grid-area: prj;
@@ -201,24 +247,26 @@ main a:hover {
 }
 
 .button {
-    background-color: #0004;
-    color: #fff;
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
     padding: 1rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
     transition-duration: .25s;
-    border: 1px solid #fff;
+    border: 1px solid var(--white);
     border-radius: .5rem;
     white-space: nowrap;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .button:hover {
-    color: #fff;
+    color: var(--white);
     margin: -.25rem;
     padding: 1.25rem;
-    box-shadow: 0 0 2rem -.75rem #fff;
+    box-shadow: 0 0 2rem -.75rem var(--text-color);
     color: #000;
     background-color: #fff;
 }
@@ -229,7 +277,7 @@ main a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    box-shadow: inset 0 0 0 100vmax #000a;
+    box-shadow: inset 0 0 0 100vmax var(--card-overlay-color);
 }
 .card:hover{
     color:inherit;
@@ -309,7 +357,7 @@ main a:hover {
 }
 
 @keyframes breathe {
-    to {box-shadow: 0 0 2rem -.75rem rgb(255, 255, 255)} 
+    to {box-shadow: 0 0 2rem -.75rem var(--text-color)} 
 }
 
 #coords {
@@ -320,7 +368,7 @@ main a:hover {
 #trailer {
     width: 75vmax;
     aspect-ratio: 1 / 1;
-    background-color: #080808;
+    background-color: var(--trailer-color);
     filter: blur(16px);
     border-radius: 50%;
     position: fixed;
