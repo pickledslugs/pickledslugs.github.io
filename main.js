@@ -10,7 +10,7 @@ function buildLayout() {
                 <h1><a href="/" title="home">pickledslugs<span class="cur">_</span></a></h1>
             </div>
             <div class='right'>
-                <p>theme 🌓 (WIP)
+                <p>(work in progress)
             </div>
         </div>
     `;
