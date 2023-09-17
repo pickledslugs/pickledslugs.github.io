@@ -53,7 +53,7 @@ const animateTrailer = e => {
   }
   
   trailer.animate(keyframes, { 
-    duration: 5000, 
+    duration: 500, 
     fill: "forwards" 
   });
 }

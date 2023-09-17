@@ -7,9 +7,10 @@
     --light: #eee;
     --light-cc: #eeec;
     --darker-light: #c8c8c8;
-    --black: #000;
-    --darker-dark: #080808;
+    --gray: #444; 
     --dark: #111;
+    --darker-dark: #080808;
+    --black: #000;
     --dark-cc: #111c;
     --white-11: #fff1;
     --black-11: #0001;
@@ -27,6 +28,7 @@
         --header-color: var(--light-cc);
         --border-color: var(--black-11);
         --button-bg-color: var(--white-44);
+        --button-border-color: var(--light);
         --card-overlay-color: var(--white-aa)
     }
 }
@@ -39,6 +41,7 @@
         --header-color: var(--dark-cc);
         --border-color: var(--white-11);
         --button-bg-color: var(--black-44);
+        --button-border-color: var(--gray);
         --card-overlay-color: var(--black-aa)
     }
 }
@@ -48,6 +51,11 @@ body {
     font-weight: 300;
     color: var(--text-color);
     background-color: var(--bg-color);
+    /* background: radial-gradient(circle 100vw, #f001 10px, #111 12%); */
+    background-image: url('assets/scribble.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
     height: 100vh;
     margin: 0;
 }
@@ -126,6 +134,7 @@ body {
 
     .buttons {
         flex-direction: column;
+        flex-wrap: nowrap;
     }
 
     main {
@@ -227,12 +236,6 @@ main a:hover {
     gap: 1rem;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
-    margin: 2rem 0 0 0;
-}
-
 #projects {
     margin-top: 2rem;
     grid-area: prj;
@@ -255,7 +258,7 @@ ul {
     display: inline-block;
     cursor: pointer;
     transition-duration: .25s;
-    border: 1px solid var(--white);
+    border: 1px solid var(--button-border-color);
     border-radius: .5rem;
     white-space: nowrap;
     touch-action: manipulation;
@@ -268,6 +271,7 @@ ul {
     padding: 1.25rem;
     box-shadow: 0 0 2rem -.75rem var(--text-color);
     color: #000;
+    border-color: #fff;
     background-color: #fff;
 }
 
@@ -357,7 +361,7 @@ ul {
 }
 
 @keyframes breathe {
-    to {box-shadow: 0 0 2rem -.75rem var(--text-color)} 
+    to {box-shadow: 0 0 1rem -.75rem var(--text-color)} 
 }
 
 #coords {
@@ -366,11 +370,12 @@ ul {
 }
 
 #trailer {
-    width: 75vmax;
+    width: 24px;
     aspect-ratio: 1 / 1;
-    background-color: var(--trailer-color);
-    filter: blur(16px);
     border-radius: 50%;
+    border-color: var(--border-color);
+    border-style: solid;
+    border-width: 1px;
     position: fixed;
     left: 0px;
     top: 0px;
