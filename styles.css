@@ -51,8 +51,7 @@ body {
     font-weight: 300;
     color: var(--text-color);
     background-color: var(--bg-color);
-    /* background: radial-gradient(circle 100vw, #f001 10px, #111 12%); */
-    background-image: url('assets/scribble.svg');
+    background: radial-gradient(circle, var(--trailer-color) , var(--bg-color) 50vmax);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
