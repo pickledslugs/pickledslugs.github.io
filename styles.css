@@ -51,10 +51,11 @@ body {
     font-weight: 300;
     color: var(--text-color);
     background-color: var(--bg-color);
-    background: radial-gradient(circle, var(--trailer-color) , var(--bg-color) 50vmax);
+    background-image: radial-gradient(circle, var(--trailer-color) 10vmin, var(--bg-color) 50vmax);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    background-attachment: fixed;
     height: 100vh;
     margin: 0;
 }
