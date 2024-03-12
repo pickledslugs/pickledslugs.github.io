@@ -7,17 +7,17 @@ function buildLayout() {
     header.innerHTML = `
         <div class="bodywidth">
             <div class='left'>
-                <h1><a href="/" title="home">pickledslugs<span class="cur">_</span></a></h1>
+                <h1><a href="/" title="home">/<span class="cur">_</span></a></h1>
             </div>
             <div class='right'>
-                <p>(work in progress)
+                <p>// work in progress
             </div>
         </div>
     `;
     footer.innerHTML = `
         <div class="bodywidth">
             <div class='left'>
-                <p>© pickledslugs '23 (twenty twenty three)
+                <p>© Stepan Lugovoy 2024
             </div>
             <div class='right'>
                 <p id="coords">x = 0, y = 0

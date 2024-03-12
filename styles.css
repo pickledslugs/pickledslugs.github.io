@@ -304,7 +304,7 @@ main a:hover {
     align-items: right;
     grid-area: pic;
     border-radius: 50%;
-    background-image: url('assets/pfp.jpg');
+    background-image: url('assets/pfp.png');
     background-size: 100%;
 }
 
