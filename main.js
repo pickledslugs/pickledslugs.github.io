@@ -17,7 +17,7 @@ function buildLayout() {
     footer.innerHTML = `
         <div class="bodywidth">
             <div class='left'>
-                <p>© Stepan Lugovoy 2024
+                <p>© Stepan Lugovoy 2025
             </div>
             <div class='right'>
                 <p id="coords">x = 0, y = 0
